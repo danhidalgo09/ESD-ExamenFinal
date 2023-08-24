@@ -214,7 +214,7 @@ void interfaz::menuPrincipal()
 
 			_mInterfaz.moverXY(0, 6);
 
-			for (int i = 0; i < 6; i++)
+			for (int i = 0; i < 7; i++)
 			{
 				cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 			}
@@ -222,7 +222,7 @@ void interfaz::menuPrincipal()
 			_mInterfaz.moverXY(25, 7);
 			cout << cuadroIngresarTexto;
 
-			_mInterfaz.moverXY(25, 6);
+			_mInterfaz.moverXY(25, 7);
 			cout << "Hemos llegado al final de las preguntas...";
 
 			// El "u8" al inicio del string es para indicar que hacemos uso de caracteres de codificacion UTF-8
