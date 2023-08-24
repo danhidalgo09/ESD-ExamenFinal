@@ -69,6 +69,12 @@ int metodoInterfaz::confirmarDatos(string _texto, int _posicion)
 					}
 				}
 			}
+			else if (key == 27)
+			{
+				cout << "\033[40m\033[37m";
+				system("cls");
+				exit(0);
+			}
 			else if (key == '\r')
 			{
 				break;

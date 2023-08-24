@@ -57,3 +57,62 @@ arbol archivo::cargarPreguntas()
         throw e;
     }
 }
+
+void archivo::guardarRespuestas(vector<int> _listaRespuestas)
+{
+    try
+    {
+        if (!_listaRespuestas.empty())
+        {
+            ofstream guardarRespuestas("datosRespuestas.dat");
+            
+            while (!_listaRespuestas.empty())
+            {
+                guardarRespuestas << _listaRespuestas.front() << "\n";
+                _listaRespuestas.erase(_listaRespuestas.begin());
+            }
+
+            guardarRespuestas.close();
+        }
+        else
+        {
+            ofstream guardarRespuestas("datosRespuestas.dat");
+            guardarRespuestas << "";
+            guardarRespuestas.close();
+        }
+    }
+    catch (exception& e)
+    {
+        throw e;
+    }
+}
+
+vector<int> archivo::cargarRespuestas()
+{
+    try
+    {
+        vector<int> listaRespuestas;
+
+        // Cargamos el archivo con las respuestas
+        ifstream cargarRespuesta("datosRespuestas.dat");
+
+        // Si el archivo existe se abre
+        if (cargarRespuesta.is_open())
+        {
+            // Se irá por cada linea de datos archivo y se iran definiendo cada dato para luego ser agregado de vuelta en el arbol
+            while (getline(cargarRespuesta, linea))
+            {
+                // Respuesta dadas por el usuario
+                respuesta = stoi(linea);
+
+                listaRespuestas.push_back(respuesta);
+            }
+        }
+
+        return listaRespuestas;
+    }
+    catch (exception& e)
+    {
+        throw e;
+    }
+}

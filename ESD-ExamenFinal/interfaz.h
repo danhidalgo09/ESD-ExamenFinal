@@ -14,6 +14,7 @@ protected:
 
 	// Variable para el usuario
 	int respuesta;
+	vector<int> listaRespuesta;
 
 public:
 	void menuPrincipal();

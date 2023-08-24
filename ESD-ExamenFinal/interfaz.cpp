@@ -7,10 +7,30 @@ void interfaz::menuPrincipal()
 		// Cargamos las preguntas en el nodo
 		_arbol = _archivo.cargarPreguntas();
 
+		// Cargamos las respuestas en el vector
+		listaRespuesta = _archivo.cargarRespuestas();
+
 		while (1)
 		{
 			// Obtenemos la raiz del arbol
 			_preguntas = _arbol.obtenerRaiz();
+
+			// Si el vector no esta vacio
+			if (!listaRespuesta.empty())
+			{
+				// Moveremos el nodo hasta la ultima posicion seleccionada por el usuario
+				for (int i = 0; i < listaRespuesta.size(); i++)
+				{
+					if (listaRespuesta[i] == 1)
+					{
+						_preguntas = _preguntas -> obtenerSi();
+					}
+					else if (listaRespuesta[i] == 2)
+					{
+						_preguntas = _preguntas -> obtenerNo();
+					}
+				}
+			}
 
 			// Series de string usados para el diseño de la interface
 			// Repetirá un caracter X cantidad de veces cada vez que se llame
@@ -52,6 +72,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "4" && respuesta == 1)
 				{
@@ -60,6 +83,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 1)
 				{
@@ -68,6 +94,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 2)
 				{
@@ -76,6 +105,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 1)
 				{
@@ -84,6 +116,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 2)
 				{
@@ -92,6 +127,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 1)
 				{
@@ -100,6 +138,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
+					
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 2)
 				{
@@ -108,6 +149,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "9" && respuesta == 2)
 				{
@@ -116,6 +160,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 1)
 				{
@@ -124,6 +171,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 2)
 				{
@@ -132,6 +182,9 @@ void interfaz::menuPrincipal()
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se limpia la lista ya que se ha llegado al de una de las ramas de preguntas
+					listaRespuesta.clear();
 				}
 				// Si no se cumplen ninguna de las condiciones anteriores, solo se obtiene la respuesta para avanzar a la siguiente pregunta
 				else if (respuesta == 1)
@@ -139,13 +192,22 @@ void interfaz::menuPrincipal()
 					_mInterfaz.moverXY(0, 6);
 					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 					_preguntas = _preguntas -> obtenerSi();
+
+					// Se agrega la respuesta a la lista
+					listaRespuesta.push_back(respuesta);
 				}
 				else if (respuesta == 2)
 				{
 					_mInterfaz.moverXY(0, 6);
 					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 					_preguntas = _preguntas -> obtenerNo();
+
+					// Se agrega la respuesta a la lista
+					listaRespuesta.push_back(respuesta);
 				}
+
+				// Se guarda la lista en el archivo
+				_archivo.guardarRespuestas(listaRespuesta);
 			}
 
 			_mInterfaz.moverXY(0, 6);
