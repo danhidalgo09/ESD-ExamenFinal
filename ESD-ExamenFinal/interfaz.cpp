@@ -68,7 +68,7 @@ void interfaz::menuPrincipal()
 				if (_preguntas -> obtenerPregunta() -> getCodigo() == "3" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Grito Guanaco");
+					_mInterfaz.mostrarMensajeRespuesta("Grito Guanacasteco", "Sueles ser un poco timido y reservado en ocaciones lo cual", "puede jugarte malas pasadas. No tengas miedo a salir de tu zona de", u8"confort y hacer oír tu voz.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -79,7 +79,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "4" && respuesta == 1)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Laura Ortega");
+					_mInterfaz.mostrarMensajeRespuesta("Laura Ortega", "Tienes una fuerte personalidad y eso suele meterte en", u8"problemas. Usualmente estás escuchando todos los chismes de tu", u8"círculo o bien siendo parte de ellos.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
@@ -90,7 +90,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 1)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Ignacio Santos");
+					_mInterfaz.mostrarMensajeRespuesta("Ignacio Santos", "Sueles ser una persona centrada y resposable. Las personas", "te suelen tomar en serio. Sin embargo, ten cuidado con las parejas que", "elijes ya que algunas solo quieren ser millonarias.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
@@ -101,7 +101,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Migue");
+					_mInterfaz.mostrarMensajeRespuesta("Migue", "Tienes una personalidad muy calmada y sueles ser", "introvertido. En ocasiones suele darle mucha importancia a lo que las", u8"demás personas piensan de tí, pero debes aprender a ignorarlos.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -112,7 +112,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 1)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Diego Garro");
+					_mInterfaz.mostrarMensajeRespuesta("Diego Garro", "Tienes una personalidad muy original y no tienes miedo de", u8"ser tú mismo. aunque las personas a tu alrededor suelen reirse de tus", "extravagancias.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
@@ -123,7 +123,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Ale Grillo");
+					_mInterfaz.mostrarMensajeRespuesta("Ale Grillo", "Eres una persona amable, calmada y que se lleva bien con", u8"los demás. Sueles estar alejado del drama y tienes buenas relaciones", "personales.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -134,7 +134,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 1)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Kebria");
+					_mInterfaz.mostrarMensajeRespuesta("Kebria", u8"Tiendes a llamar la atención por tu burbujeante", u8"personalidad. Sin embargo, sueles tomar pésimas decisiones cuando hay", "alcohol involucrado.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
@@ -145,7 +145,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Ganoza");
+					_mInterfaz.mostrarMensajeRespuesta("Brayan Ganoza", "Eres muy extrovertido y en ocasiones eso te lleva a hacer", u8"el ridiculo en público, aunque eso no te detiene de sacar tus mejores", "pasos de baile.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -156,7 +156,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "9" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Julian");
+					_mInterfaz.mostrarMensajeRespuesta(u8"Julián Valverde (Tucán)", u8"Eres una persona muy simpática y carismática, sueles estar", "rodeado de buenas amistades, a pesar de eso eres una persona con los", "pies en la tierra y trabajador.");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -167,7 +167,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 1)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("La Power");
+					_mInterfaz.mostrarMensajeRespuesta("La Power", u8"¡Eres es-pec-ta-cu-lar!, tienes una personalidad fuerte y", u8"explosiva. Eres hermosa e irresistible, o al menos eso crees tú.", "");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerSi();
@@ -178,7 +178,7 @@ void interfaz::menuPrincipal()
 				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 2)
 				{
 					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
-					_mInterfaz.mostrarMensajeRespuesta("Viviyiyi");
+					_mInterfaz.mostrarMensajeRespuesta("Viviyiyi", u8"Tienes una personalidad única y te gusta llamar mucho la", u8"atención, no de buena manera. Asiste donde un profesional.", "");
 
 					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
 					_preguntas = _preguntas -> obtenerNo();
@@ -211,6 +211,11 @@ void interfaz::menuPrincipal()
 			}
 
 			_mInterfaz.moverXY(0, 6);
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 			_mInterfaz.moverXY(25, 7);
 			cout << cuadroIngresarTexto;

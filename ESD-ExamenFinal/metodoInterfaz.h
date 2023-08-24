@@ -16,6 +16,6 @@ public:
 	void mostrarMensajeFallido(string _mensaje);
 
 	// Mostrará un cuadro de mensaje con la respuesta final de las preguntas
-	void mostrarMensajeRespuesta(string _personaje);
+	void mostrarMensajeRespuesta(string _personaje, string _descripcion, string _descripcion2, string _descripcion3);
 };
 

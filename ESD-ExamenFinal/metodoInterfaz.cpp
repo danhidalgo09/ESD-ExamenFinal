@@ -151,7 +151,7 @@ void metodoInterfaz::mostrarMensajeFallido(string _mensaje)
 	cout << "\033[44m\033[30m";
 }
 
-void metodoInterfaz::mostrarMensajeRespuesta(string _personaje)
+void metodoInterfaz::mostrarMensajeRespuesta(string _personaje, string _descripcion, string _descripcion2, string _descripcion3)
 {
 	// Se creará un cuadro de mensaje mostrando que ha ocurrido un error durante el proceso de X accion
 	int key;
@@ -166,7 +166,7 @@ void metodoInterfaz::mostrarMensajeRespuesta(string _personaje)
 	cout << "\033[44m\033[30m" << espacios << endl;
 	cout << cuadroLado << "\033[100m ." << cuadroBorde << ". \033[44m" << cuadroLado << endl;
 
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		cout << cuadroLado << "\033[100m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << endl;
 	}
@@ -180,9 +180,15 @@ void metodoInterfaz::mostrarMensajeRespuesta(string _personaje)
 	cout << "\033[100m\033[30m" << "Chatbot - Respuesta";
 
 	moverXY(25, 6);
-	cout << "Tu eres: " << _personaje;
+	cout << u8"Tú eres: " << _personaje;
+	moverXY(25, 7);
+	cout << u8"Descripción: " << _descripcion;
+	moverXY(25, 8);
+	cout << _descripcion2;
+	moverXY(25, 9);
+	cout << _descripcion3;
 
-	moverXY(55, 8);
+	moverXY(55, 11);
 	cout << "\033[41m\033[37m" << "Aceptar";
 
 	while (1)
