@@ -1,28 +1,12 @@
-#include "Nodo.h"
-#include "Arbol.h"
+#include "interfaz.h"
 
-using namespace std;
 int main()
 {
+	interfaz _interfaz;
 
-    Arbol chatbotTree;
-    Nodo* raiz = new Nodo("¿Es un mamífero?");
-    chatbotTree.insertar(raiz, "¿Tiene rayas?", "Cebra");
-    chatbotTree.insertar(raiz->no, "¿Tiene plumas?", "Serpiente");
+	// Se configura la consola para mostrar caracteres de codificacion UTF-8
+	SetConsoleOutputCP(CP_UTF8);
 
-    chatbotTree.insertar(raiz->si, "¿Vive en el agua?", "Delfín");
-    chatbotTree.insertar(raiz->no->si, "¿Puede volar?", "Pingüino");
-    chatbotTree.insertar(raiz->no->no, "¿Es venenoso?", "Ratón");
-
-    cout << "¡Hola! Soy un chatbot interactivo. Responde las preguntas con 'si' o 'no'." << endl;
-    chatbotTree.recorrerArbol(raiz);
-
-    delete raiz->si;
-    delete raiz->no->si;
-    delete raiz->no->no;
-    delete raiz->no;
-    delete raiz;
-
-    return 0;
-
-}//FIN MAIN
+	// Llamamos al metodo para el menú principal de la interface
+	_interfaz.menuPrincipal();
+}

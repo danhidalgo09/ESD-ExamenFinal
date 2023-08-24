@@ -127,13 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arbol.h" />
-    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="arbol.h" />
+    <ClInclude Include="archivo.h" />
+    <ClInclude Include="interfaz.h" />
+    <ClInclude Include="nodo.h" />
+    <ClInclude Include="nodoArbol.h" />
+    <ClInclude Include="pregunta.h" />
+    <ClInclude Include="std.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arbol.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="arbol.cpp" />
+    <ClCompile Include="archivo.cpp" />
+    <ClCompile Include="interfaz.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="nodo.cpp" />
+    <ClCompile Include="nodoArbol.cpp" />
+    <ClCompile Include="pregunta.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

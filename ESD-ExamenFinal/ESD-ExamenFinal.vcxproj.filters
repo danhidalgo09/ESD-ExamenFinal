@@ -15,21 +15,48 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Nodo.h">
+    <ClInclude Include="nodo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Arbol.h">
+    <ClInclude Include="arbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interfaz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="std.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="archivo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nodoArbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pregunta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Nodo.cpp">
+    <ClCompile Include="nodo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Arbol.cpp">
+    <ClCompile Include="arbol.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interfaz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="archivo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nodoArbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pregunta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

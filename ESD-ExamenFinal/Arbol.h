@@ -1,26 +1,18 @@
-#pragma once
+#include "nodoArbol.h"
 
-#include <iostream>
-#include <string>
-#include "Nodo.h"
-
-#define RESET   "\033[0m"
-#define GREEN   "\033[32m"
-#define RED     "\033[31m"
-
-class Arbol
+class arbol
 {
+protected:
+    nodoArbol _nodoArbol;
+    nodo* raiz;
+
 public:
+    // Insertará las preguntas en el nodo
+    void registrarPregunta(pregunta* _pregunta);
 
-    Arbol();
+    // Obtenemos el nodo raiz del arbol
+    nodo* obtenerRaiz();
 
-    void insertar(Nodo* nodo, const string& _nuevaP, const string& _nuevaR);
-
-    void recorrerArbol(Nodo* nodo);
-
-private:
-    Nodo* raiz;
-
-   
+    //void recorrerArbol(nodo* _nodo);
 };
 
