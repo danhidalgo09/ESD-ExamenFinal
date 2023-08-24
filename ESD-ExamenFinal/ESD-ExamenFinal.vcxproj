@@ -130,6 +130,7 @@
     <ClInclude Include="arbol.h" />
     <ClInclude Include="archivo.h" />
     <ClInclude Include="interfaz.h" />
+    <ClInclude Include="metodoInterfaz.h" />
     <ClInclude Include="nodo.h" />
     <ClInclude Include="nodoArbol.h" />
     <ClInclude Include="pregunta.h" />
@@ -140,6 +141,7 @@
     <ClCompile Include="archivo.cpp" />
     <ClCompile Include="interfaz.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="metodoInterfaz.cpp" />
     <ClCompile Include="nodo.cpp" />
     <ClCompile Include="nodoArbol.cpp" />
     <ClCompile Include="pregunta.cpp" />
