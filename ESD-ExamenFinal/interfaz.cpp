@@ -58,12 +58,14 @@ void interfaz::menuPrincipal()
 
 			_mInterfaz.moverXY(50, 4);
 			cout << "\033[100m" << "Chatbot - Preguntas";
+			_mInterfaz.moverXY(40, 5);
+			cout << "\033[100m" << u8"¿Que personaje de la farandula tica eres?";
 
 			while (_preguntas != nullptr)
 			{
 
 				// Se le mostrará la pregunta al usuario y el usuario deberá seleccionar una opcion
-				respuesta = _mInterfaz.confirmarDatos(_preguntas -> obtenerPregunta() -> getPregunta(), 6);
+				respuesta = _mInterfaz.confirmarDatos(_preguntas -> obtenerPregunta() -> getPregunta(), 7);
 
 				if (_preguntas -> obtenerPregunta() -> getCodigo() == "3" && respuesta == 2)
 				{
@@ -189,7 +191,7 @@ void interfaz::menuPrincipal()
 				// Si no se cumplen ninguna de las condiciones anteriores, solo se obtiene la respuesta para avanzar a la siguiente pregunta
 				else if (respuesta == 1)
 				{
-					_mInterfaz.moverXY(0, 6);
+					_mInterfaz.moverXY(0, 7);
 					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 					_preguntas = _preguntas -> obtenerSi();
 
@@ -198,7 +200,7 @@ void interfaz::menuPrincipal()
 				}
 				else if (respuesta == 2)
 				{
-					_mInterfaz.moverXY(0, 6);
+					_mInterfaz.moverXY(0, 7);
 					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 					_preguntas = _preguntas -> obtenerNo();
 
