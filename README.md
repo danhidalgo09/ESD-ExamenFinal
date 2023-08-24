@@ -1,5 +1,5 @@
 # Estructura de Datos - Examen Final
-Este es el ultimo examen del curso de Estructuras de Datos donde realizamos un programa en C++, este programa es un chatbot basico donde el te realizará preguntas de Si o No y el adivinará a cual persona de Costa Rica te pareces. Si no conoces alguna de las personas, se adjuntó un documento HTML con una pequeña biografia de las personas.
+Este es el ultimo examen del curso de Estructuras de Datos donde realizamos un programa en C++, este programa es un chatbot basico donde el te realizará preguntas de Si o No y el adivinará a cual persona de Costa Rica te pareces.
 
 ## Descripcion
 El programa te realizará preguntas donde respondes con Si o No, y te dará una respuesta basado en cual persona "popular" de Costa Rica te pareces.
