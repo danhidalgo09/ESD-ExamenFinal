@@ -26,7 +26,7 @@ void interfaz::menuPrincipal()
 			cout << espacios << endl;
 			cout << cuadroLado << "\033[100m ." << cuadroBorde << ". \033[44m" << cuadroLado << endl;
 
-			for (int i = 0; i < 9; i++)
+			for (int i = 0; i < 7; i++)
 			{
 				cout << cuadroLado << "\033[100m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << endl;
 			}
@@ -41,29 +41,122 @@ void interfaz::menuPrincipal()
 
 			while (_preguntas != nullptr)
 			{
+
 				// Se le mostrará la pregunta al usuario y el usuario deberá seleccionar una opcion
-				if (_mInterfaz.confirmarDatos(_preguntas->obtenerPregunta()->getPregunta(), 6) == 1)
+				respuesta = _mInterfaz.confirmarDatos(_preguntas -> obtenerPregunta() -> getPregunta(), 6);
+
+				if (_preguntas -> obtenerPregunta() -> getCodigo() == "3" && respuesta == 2)
 				{
-					_mInterfaz.moverXY(25, 6);
-					cout << "\033[100m" << cuadroIngresarTexto;
-					_preguntas = _preguntas->obtenerSi();
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Grito Guanaco");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
 				}
-				else
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "4" && respuesta == 1)
 				{
-					_mInterfaz.moverXY(25, 6);
-					cout << "\033[100m" << cuadroIngresarTexto;
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Laura Ortega");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 1)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Ignacio Santos");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "6" && respuesta == 2)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Migue");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 1)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Diego Garro");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "7" && respuesta == 2)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Ale Grillo");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 1)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Kebria");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "8" && respuesta == 2)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Ganoza");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "9" && respuesta == 2)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Julian");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 1)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("La Power");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (_preguntas -> obtenerPregunta() -> getCodigo() == "10" && respuesta == 2)
+				{
+					// Se crea un cuadro de mensaje al que se le envia el nombre del personaje
+					_mInterfaz.mostrarMensajeRespuesta("Viviyiyi");
+
+					// Se obtiene el nodo con la respuesta para obtener el nodo nulo y salir del while
+					_preguntas = _preguntas -> obtenerNo();
+				}
+				// Si no se cumplen ninguna de las condiciones anteriores, solo se obtiene la respuesta para avanzar a la siguiente pregunta
+				else if (respuesta == 1)
+				{
+					_mInterfaz.moverXY(0, 6);
+					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
+					_preguntas = _preguntas -> obtenerSi();
+				}
+				else if (respuesta == 2)
+				{
+					_mInterfaz.moverXY(0, 6);
+					cout << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 					_preguntas = _preguntas -> obtenerNo();
 				}
 			}
 
-			_mInterfaz.moverXY(25, 6);
-			cout << "\033[100m\033[30m" << cuadroIngresarTexto;
+			_mInterfaz.moverXY(0, 6);
+			cout << "\033[44m" << cuadroLado << "\033[100m\033[30m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << "\033[100m" << endl;
 			_mInterfaz.moverXY(25, 7);
 			cout << cuadroIngresarTexto;
 
 			_mInterfaz.moverXY(25, 6);
 			cout << "Hemos llegado al final de las preguntas...";
 
+			// El "u8" al inicio del string es para indicar que hacemos uso de caracteres de codificacion UTF-8
 			if (_mInterfaz.confirmarDatos(u8"¿Quieres reiniciar el ciclo de preguntas?", 8) == 2)
 			{
 				break;

@@ -144,3 +144,50 @@ void metodoInterfaz::mostrarMensajeFallido(string _mensaje)
 
 	cout << "\033[44m\033[30m";
 }
+
+void metodoInterfaz::mostrarMensajeRespuesta(string _personaje)
+{
+	// Se creará un cuadro de mensaje mostrando que ha ocurrido un error durante el proceso de X accion
+	int key;
+	string espacios(120, ' ');
+	string cuadroLado(20, ' ');
+	string cuadroFinal(18, ' ');
+	string cuadroBorde(76, '_');
+	string cuadroRelleno(76, ' ');
+
+	system("cls");
+
+	cout << "\033[44m\033[30m" << espacios << endl;
+	cout << cuadroLado << "\033[100m ." << cuadroBorde << ". \033[44m" << cuadroLado << endl;
+
+	for (int i = 0; i < 9; i++)
+	{
+		cout << cuadroLado << "\033[100m |" << cuadroRelleno << "| \033[40m  \033[44m" << cuadroFinal << endl;
+	}
+
+	cout << cuadroLado << "\033[100m |" << cuadroBorde << "| \033[40m  \033[44m" << cuadroFinal << endl;
+	cout << cuadroLado << "\033[100m  " << cuadroRelleno << "  \033[40m  \033[44m" << cuadroFinal << endl;
+	cout << cuadroLado << "  \033[40m" << cuadroRelleno << "  \033[40m  \033[44m" << cuadroFinal << endl;
+	cout << "\033[44m\033[30m" << espacios;
+
+	moverXY(50, 4);
+	cout << "\033[100m\033[30m" << "Chatbot - Respuesta";
+
+	moverXY(25, 6);
+	cout << "Tu eres: " << _personaje;
+
+	moverXY(55, 8);
+	cout << "\033[41m\033[37m" << "Aceptar";
+
+	while (1)
+	{
+		key = _getch();
+
+		if (key == '\r')
+		{
+			break;
+		}
+	}
+
+	cout << "\033[44m\033[30m";
+}

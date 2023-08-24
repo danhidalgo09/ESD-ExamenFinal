@@ -14,5 +14,8 @@ public:
 
 	// Mostrará un cuadro de mensaje cuando ocurre un error durante la realización de una accion
 	void mostrarMensajeFallido(string _mensaje);
+
+	// Mostrará un cuadro de mensaje con la respuesta final de las preguntas
+	void mostrarMensajeRespuesta(string _personaje);
 };
 
